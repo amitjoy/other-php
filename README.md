@@ -1,1 +1,1 @@
-# other-php
+# Miscellaneous PHP Practice

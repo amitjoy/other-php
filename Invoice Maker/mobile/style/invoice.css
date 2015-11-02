@@ -1,0 +1,46 @@
+body,td,input,select {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #000000;
+}
+
+form {
+    margin: 0px;
+}
+
+a {
+    color: #000000;
+}
+
+#wrapper {
+    width: 600px;
+}
+
+#invoicetoptables {
+    width: 100%;
+    background-color: #cccccc;
+    border-collapse: seperate;
+}
+
+td#invoicecontent {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+#invoiceitemstable {
+    width: 100%;
+    background-color: #cccccc;
+    border-collapse: seperate;
+}
+
+td#invoiceitemsheading {
+    background-color: #efefef;
+    color: #000000;
+    font-weight: bold;
+}
+
+td#invoiceitemsrow {
+    background-color: #ffffff;
+    color: #000000;
+}

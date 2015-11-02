@@ -1,0 +1,1 @@
+	<div id='footer'>Powered by Pro Invoice Maker v1.3</div>

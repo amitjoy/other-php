@@ -1,0 +1,84 @@
+body{
+	background:url('../../style/images/bg.png') no-repeat top center;
+}
+
+#container2{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-300px;
+	margin-left:-150px;
+	width:300px;
+	background:url('fundal_login.png'); 
+	padding:5px;
+}
+
+#container{width:300px;}
+#container .header{height:50px;padding:0 15px;font-size:1.4em;line-height:48px;color:#fff;text-shadow:-1px -1px 0 rgba(0,0,0,.2);background:#047c01 url("header_bg.png") 0 0 repeat-x;-webkit-border-top-right-radius:5px;-webkit-border-top-left-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-topleft:5px;border-top-right-radius:5px;border-top-left-radius:5px}
+
+#container .content{background-color:#fff;padding:10px 15px}
+#container{min-height:20px}
+
+fieldset{
+	border:0px;
+}
+
+label {
+	float:left;
+	display:block;
+	line-height:22px;
+	margin-top:5px;
+	margin-bottom:2px;
+	width:150px;
+	font-weight:bold;
+	clear:left;
+}
+input.login {
+	float:left;
+	width:260px;
+	padding:4px;
+	border:1px solid #616E74;
+	clear:left;
+}
+input.autentificare {
+	float:left;
+	width:270px;
+	text-align:center;
+	background:#047c01 url("header_bg.png") bottom center repeat-x;
+	font-weight:bold;
+	border:1px solid #4E5356;
+	color:#FFFFFF;
+	height:24px;
+	padding:3px;
+	clear:left;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+.warning{
+	font-family:Tahoma, sans-serif;
+	margin-top:10px;
+	font-size:11px;
+	border-top:1px solid #CCC;
+	padding:3px;
+	text-align:center;
+}
+
+.error{
+	margin:5px;
+	background:#ffe6e6;
+	border:1px solid #ff8888;
+	padding:4px;
+	text-align:center;
+	color:#b52020;
+	font-weight:bold;
+}
+
+.suc{
+	background:#d4ffa5;
+	color:#203d00;
+	text-align:center;
+	margin:2px;
+	border:1px solid #ccc;
+	padding:2px;
+}

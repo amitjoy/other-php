@@ -1,0 +1,145 @@
+<script id="form-elements-tmpl" type="text/x-jquery-tmpl">
+    {{if fieldType =='text-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Text Field</label>
+        <input type="text" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='email-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Email Address</label>
+        <input type="email" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='number-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Number</label>
+        <input type="number" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='password-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Password</label>
+        <input type="password" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='url-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Url</label>
+        <input type="url" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='date-field'}}
+    <div id="${id}-container" class="field f_100">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Date</label>
+        <input class="ttw-date" type="date" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='range-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Range</label>
+        <input class="ttw-range" type="range" name="${name}" id="${id}" required="required" disabled="disabled"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='file-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">File</label>
+        <input type="file" name="${name}" id="${id}" required="required"/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='textarea-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Text Area</label>
+        <textarea rows="5" cols="20" name="${name}" id="${id}" required="required"></textarea>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='select-field'}}
+    <div id="${id}-container" class="field ${fieldWidth}">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}">Select</label>
+        <select name="${name}" id="${id}" required="required">
+            <option id="${id}-1" value="Option 1">Option 1</option>
+            <option id="${id}-2" value="Option 2">Option 2</option>
+            <option id="${id}-3" value="Option 3">Option 3</option>
+        </select>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='radio-field'}}
+    <div id="${id}-container" class="field ${fieldWidth} radio-group required">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}-1">Radio Buttons</label>
+
+        <div class="option clearfix"><input type="radio" name="${name}" id="${id}-1" value="Option 1"/><span class="option-title">Option 1</span></div>
+        <div class="option clearfix"><input type="radio" name="${name}" id="${id}-2" value="Option 2"/><span class="option-title">Option 2</span></div>
+        <div class="option clearfix"><input type="radio" name="${name}" id="${id}-3" value="Option 3"/><span class="option-title">Option 3</span></div>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='checkbox-field'}}
+    <div id="${id}-container" class="field ${fieldWidth} checkbox-group required">
+        {{tmpl "#field-actions-tmpl"}}
+        <label for="${id}-1">Checkboxes</label>
+
+        <div class="option clearfix"><input type="checkbox" name="${name}[]" id="${id}-1" value="Option 1"/><span class="option-title">Option 1</span><br/></div>
+        <div class="option clearfix"><input type="checkbox" name="${name}[]" id="${id}-2" value="Option 2"/><span class="option-title">Option 2</span><br/></div>
+        <div class="option clearfix"><input type="checkbox" name="${name}[]" id="${id}-3" value="Option 3"/><span class="option-title">Option 3</span><br/></div>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='checkbox-option' || fieldType == 'radio-option'}}
+    <div class="option clearfix"><input type="${type}" name="${name}" id="${id}" value="${option}"/><span class="option-title">${option}</span><br/>
+    </div>
+    {{/if}}
+
+    {{if fieldType =='select-option'}}
+    <option name="${name}" id="${id}" value="${option}"><span class="option-title">${option}</span></option>
+    {{/if}}
+
+    {{if fieldType == 'title-field'}}
+    <div id="${id}" class="form-title field">
+        {{tmpl "#field-actions-tmpl"}}
+        <h2>Form Title</h2>
+    </div>
+    {{/if}}
+
+    {{if fieldType == 'submit-field'}}
+    <div id="${id}" class="field f_100 clearfix submit">
+        {{tmpl "#field-actions-tmpl"}} 
+        <input type="submit" value="Submit"/>
+    </div>
+    {{/if}}
+</script>
+
+<script id="field-actions-tmpl" type="text/x-jquery-tmpl">
+    <div class="field-actions">
+        <span id="edit-${id}" class="edit-${actionsType}">&nbsp;</span>
+        <span id="delete-${id}" class="delete-${actionsType}">&nbsp;</span>
+    </div>
+</script>
+
+<script id="validation-setting-tmpl" type="text/x-jquery-tmpl">
+    {{if validationType == 'required'}}
+    <div>
+        <input type="checkbox" id="val-required">required
+    </div>
+    {{/if}}
+</script>

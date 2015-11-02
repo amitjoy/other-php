@@ -1,0 +1,7 @@
+
+
+# BASIC BLOCK - Note you may need AuthDigestFile instead of AuthUserFile
+AuthType Basic
+AuthName "Secret documents
+AuthUserFile Z:\Data\Sourcecode\Projects\PHP\APIClient\src\Script\Examples\basicauth\secured\.htpasswd
+Require user admin
